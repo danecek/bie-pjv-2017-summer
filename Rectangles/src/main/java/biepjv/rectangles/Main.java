@@ -5,10 +5,6 @@
  */
 package biepjv.rectangles;
 
-/**
- *
- * @author danecek
- */
 public class Main {
 
     public static void main(String[] args) {

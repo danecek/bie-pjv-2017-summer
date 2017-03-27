@@ -13,3 +13,4 @@ hs_err_pid*
 /hw/target/
 /ObjPI/target/
 /CircleQueue/target/
+/Rectangles/target/
