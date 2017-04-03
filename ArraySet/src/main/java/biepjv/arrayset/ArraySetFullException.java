@@ -6,12 +6,12 @@
 package biepjv.arrayset;
 
 
-public class ArratySetFullException extends RuntimeException {
+public class ArraySetFullException extends RuntimeException {
 
-    public ArratySetFullException() {
+    public ArraySetFullException() {
     }
 
-    public ArratySetFullException(String message) {
+    public ArraySetFullException(String message) {
         super(message);
     }
     

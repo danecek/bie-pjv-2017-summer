@@ -16,7 +16,7 @@ import java.util.Set;
  */
 public class ArraySet implements Set<Double> {
 
-    private final Double[] data;
+    protected Double[] data;
     private int size;
 
     public ArraySet() {
@@ -74,7 +74,7 @@ public class ArraySet implements Set<Double> {
     public boolean add(Double e) {
         if (!contains(e)) {
             if (isFull()) {
-                throw new ArratySetFullException();
+                throw new ArraySetFullException();
             }
             data[size++] = e;
             return true;

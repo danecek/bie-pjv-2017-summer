@@ -14,10 +14,10 @@ import java.util.Iterator;
 public class Main {
 
     public static void main(String[] args) {
-        ArraySet as = new ArraySet(10);
+        ArraySet as = new ArraySetDynamic(1);
         as.add(1.2);
         System.out.println(as);
-        as.add(1.2);
+        as.add(1.3);
         System.out.println(as);
         as.add(2.3);
         System.out.println(as);
