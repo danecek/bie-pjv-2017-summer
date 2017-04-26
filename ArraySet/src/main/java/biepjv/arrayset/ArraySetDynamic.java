@@ -7,10 +7,6 @@ package biepjv.arrayset;
 
 import java.util.logging.Logger;
 
-/**
- *
- * @author danecek
- */
 public class ArraySetDynamic extends ArraySet {
 
     @Override

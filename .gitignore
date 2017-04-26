@@ -14,3 +14,5 @@ hs_err_pid*
 /ObjPI/target/
 /CircleQueue/target/
 /Rectangles/target/
+/ArraySet/target/
+/Lexer/target/

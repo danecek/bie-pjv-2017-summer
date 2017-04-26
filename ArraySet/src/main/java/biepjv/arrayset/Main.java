@@ -5,7 +5,10 @@
  */
 package biepjv.arrayset;
 
+import java.io.IOException;
 import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -21,20 +24,34 @@ public class Main {
         System.out.println(as);
         as.add(2.3);
         System.out.println(as);
-        
+
         System.out.println("************");
-        for (Iterator<Double> it = as.iterator(); it.hasNext();   ) {
+        for (Iterator<Double> it = as.iterator(); it.hasNext();) {
             System.out.println(it.next());
-        } 
+        }
         System.out.println("************");
         for (Double d : as) {
             System.out.println(d);
-        } 
+        }
         System.out.println("************");
-       
-        as.remove(1.2);
-        System.out.println(as);
-        as.clear();
-        System.out.println(as.isEmpty());
+        try {
+            as.store("arrayset.data");
+        } catch (IOException ex) {
+            System.out.println(ex);
+        }
+        
+        try {
+            ArraySet as2 = ArraySet.load("arrayset.data");
+            System.out.println();
+//
+//        as.remove(1.2);
+//        System.out.println(as);
+//        as.clear();
+//        System.out.println(as.isEmpty());
+        } catch (IOException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
