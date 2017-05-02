@@ -10,6 +10,7 @@ import biepjv.jfxsemaphor.view.SemaphorPane;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
@@ -37,6 +38,8 @@ public class Semaphor extends Application {
             }
         });
         HBox buttonBox = new HBox(nextButton, startButton, stopButton);
+        buttonBox.setSpacing(10);
+        buttonBox.setPadding(new Insets(10));
         Scene s = new Scene(new VBox(sp, buttonBox));
         primaryStage.setScene(s);
         primaryStage.centerOnScreen();

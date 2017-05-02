@@ -5,26 +5,23 @@
  */
 package biepjv.jfxsemaphor.controller;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 import javafx.scene.paint.Color;
 
-
 public abstract class State {
-
-    /**
-     * @return the colors
-     */
-    public Color[] getColors() {
+    
+    public Set<Color> getColors() {
         return colors;
     }
     
     abstract void exit(SemaphorController sc);
     
-    private Color[] colors;
-
-    public State(Color ... colors) {
-        this.colors = colors;
-    }    
+    private final Set<Color> colors;
     
+    public State(Color... colors) {
+        this.colors = new HashSet<>(Arrays.asList(colors));
+    }    
     
 }
